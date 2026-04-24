@@ -1,0 +1,68 @@
+================================================================================
+✅ SET 1: HTML FORM & DOCKER BASICS
+================================================================================
+
+🔹 TASK A: HTML Form + Git Source Control
+──────────────────────────────────────────
+
+💻 STEP 1: Create HTML File (index.html)
+─────────────────────────────────────────
+<!DOCTYPE html>
+<html>
+<body>
+<form onsubmit="alert('Registered Successfully'); return false;">
+<h3>Event Registration</h3>
+<input type="text" placeholder="Name" required><br>
+<input type="email" placeholder="Email" required><br>
+<button>Register</button>
+</form>
+</body>
+</html>
+
+▶️ STEP 2: Test Form in Browser
+───────────────────────────────
+- Open in browser
+- Fill form
+- Click Register
+- Verify success alert ✅
+
+🧑‍💻 STEP 3: Initialize Git Repository
+──────────────────────────────────────────
+git init
+git add .
+git commit -m "first commit"
+
+🔗 STEP 4: Push to GitHub
+──────────────────────────
+- Create repository on GitHub
+- Copy URL
+git remote add origin https://github.com/username/repo.git
+git branch -M main
+git push -u origin main
+
+🧠 KEY FLOW: init → add → commit → push
+
+
+🔹 TASK B: Docker & Container Management
+──────────────────────────────────────────
+
+📄 STEP 1: Create Dockerfile
+───────────────────────────────
+FROM nginx
+COPY . /usr/share/nginx/html
+
+💻 STEP 2: Build & Run Container
+──────────────────────────────────
+docker build -t myapp .
+docker run -d -p 8080:80 myapp
+
+🌐 STEP 3: Access Application
+──────────────────────────────
+Open browser: http://localhost:8080
+
+🔄 STEP 4: Container Management Commands
+──────────────────────────────────────────
+docker ps                 # List containers
+docker stop <id>          # Stop container
+docker start <id>         # Start container
+docker rm <id>            # Remove container
